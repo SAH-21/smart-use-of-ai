@@ -1,462 +1,237 @@
-/* =========================================================
-   SMART USE OF AI
-   Sahil Thute
-   Website JavaScript
-   ========================================================= */
+// Smart Use of AI — site interactions
+
+const navbar = document.getElementById('navbar');
+const backTop = document.getElementById('backTop');
+const mobileMenu = document.getElementById('mobileMenu');
+const navLinks = document.querySelector('.nav-links');
 
 
-/* =========================================================
-   DOM READY
-   ========================================================= */
+// =========================================
+// NAVBAR SCROLL + BACK TO TOP
+// =========================================
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener('scroll', () => {
 
-    document.body.classList.add("js-ready");
+    if (navbar) {
+        navbar.classList.toggle(
+            'scrolled',
+            window.scrollY > 30
+        );
+    }
+
+    if (backTop) {
+        backTop.classList.toggle(
+            'show',
+            window.scrollY > 500
+        );
+    }
+
+});
 
 
-    /* =====================================================
-       MOBILE NAVIGATION
-    ===================================================== */
+// =========================================
+// BACK TO TOP
+// =========================================
 
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+if (backTop) {
 
-    if (menuToggle && navLinks) {
+    backTop.addEventListener('click', () => {
 
-        menuToggle.addEventListener("click", () => {
-
-            navLinks.classList.toggle("open");
-
-            const isOpen = navLinks.classList.contains("open");
-
-            menuToggle.innerHTML = isOpen
-                ? '<i class="fa-solid fa-xmark"></i>'
-                : '<i class="fa-solid fa-bars"></i>';
-
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
 
+    });
 
-        /* Close menu after clicking a link */
+}
 
-        const navItems = navLinks.querySelectorAll("a");
 
-        navItems.forEach((link) => {
+// =========================================
+// MOBILE MENU
+// =========================================
 
-            link.addEventListener("click", () => {
+if (mobileMenu && navLinks) {
 
-                navLinks.classList.remove("open");
+    mobileMenu.addEventListener('click', () => {
 
-                menuToggle.innerHTML =
-                    '<i class="fa-solid fa-bars"></i>';
+        navLinks.classList.toggle('mobile-open');
+
+    });
+
+
+    navLinks
+        .querySelectorAll('a')
+        .forEach(a => {
+
+            a.addEventListener('click', () => {
+
+                navLinks.classList.remove(
+                    'mobile-open'
+                );
 
             });
 
         });
 
-    }
+}
 
 
-    /* =====================================================
-       REVEAL ANIMATION
-    ===================================================== */
+// =========================================
+// SCROLL REVEAL ANIMATION
+// =========================================
 
-    const revealElements = document.querySelectorAll(".reveal");
+const revealItems =
+    document.querySelectorAll('.reveal');
 
-    if ("IntersectionObserver" in window) {
 
-        const revealObserver = new IntersectionObserver(
-            (entries, observer) => {
+if ('IntersectionObserver' in window) {
 
-                entries.forEach((entry) => {
+    const observer =
+        new IntersectionObserver(
+
+            entries => {
+
+                entries.forEach(entry => {
 
                     if (entry.isIntersecting) {
 
-                        entry.target.classList.add("visible");
+                        entry.target
+                            .classList
+                            .add('visible');
 
-                        observer.unobserve(entry.target);
+                        observer.unobserve(
+                            entry.target
+                        );
 
                     }
 
                 });
 
             },
+
             {
-                threshold: 0.12,
-                rootMargin: "0px 0px -50px 0px"
-            }
-        );
-
-
-        revealElements.forEach((element) => {
-
-            revealObserver.observe(element);
-
-        });
-
-    } else {
-
-        revealElements.forEach((element) => {
-
-            element.classList.add("visible");
-
-        });
-
-    }
-
-
-    /* =====================================================
-       NAVBAR ACTIVE SECTION
-    ===================================================== */
-
-    const sections = document.querySelectorAll(
-        "main section[id]"
-    );
-
-    const navItems = document.querySelectorAll(
-        ".nav-link"
-    );
-
-    const updateActiveNavigation = () => {
-
-        const scrollPosition =
-            window.scrollY + 150;
-
-        let currentSection = "home";
-
-        sections.forEach((section) => {
-
-            const top = section.offsetTop;
-            const height = section.offsetHeight;
-
-            if (
-                scrollPosition >= top &&
-                scrollPosition < top + height
-            ) {
-                currentSection = section.id;
+                threshold: 0.12
             }
 
-        });
-
-
-        navItems.forEach((link) => {
-
-            const href = link.getAttribute("href");
-
-            link.classList.toggle(
-                "active",
-                href === `#${currentSection}`
-            );
-
-        });
-
-    };
-
-
-    window.addEventListener(
-        "scroll",
-        updateActiveNavigation,
-        { passive: true }
-    );
-
-    updateActiveNavigation();
-
-
-    /* =====================================================
-       BACK TO TOP
-    ===================================================== */
-
-    const backToTop =
-        document.getElementById("backToTop");
-
-    if (backToTop) {
-
-        const toggleBackToTop = () => {
-
-            if (window.scrollY > 600) {
-
-                backToTop.classList.add("show");
-
-            } else {
-
-                backToTop.classList.remove("show");
-
-            }
-
-        };
-
-
-        window.addEventListener(
-            "scroll",
-            toggleBackToTop,
-            { passive: true }
         );
 
 
-        backToTop.addEventListener(
-            "click",
-            () => {
+    revealItems.forEach(el => {
 
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
+        observer.observe(el);
 
-            }
-        );
+    });
 
-    }
+} else {
 
+    revealItems.forEach(el => {
 
-    /* =====================================================
-       IMAGE LIGHTBOX
-    ===================================================== */
+        el.classList.add('visible');
 
-    const lightbox =
-        document.getElementById("lightbox");
+    });
 
-    const lightboxImage =
-        document.getElementById("lightboxImage");
-
-    const lightboxClose =
-        document.getElementById("lightboxClose");
-
-    const screenshotImages =
-        document.querySelectorAll(
-            ".screenshot-card img"
-        );
+}
 
 
-    if (
-        lightbox &&
-        lightboxImage &&
-        lightboxClose
-    ) {
+// =========================================
+// COMPARISON DATA
+// =========================================
 
-        screenshotImages.forEach((image) => {
+const comparisonData = {
 
-            image.addEventListener("click", () => {
+    gemini: [
+        'Gemini',
+        'Ideation, research & explanations',
+        'THINKING'
+    ],
 
-                lightboxImage.src = image.src;
+    canva: [
+        'Canva Magic',
+        'Visual creation & design',
+        'CREATION'
+    ],
 
-                lightboxImage.alt =
-                    image.alt || "Expanded screenshot";
+    notebook: [
+        'NotebookLM',
+        'Source-based study & summaries',
+        'STUDY'
+    ],
 
-                lightbox.classList.add("open");
+    sheets: [
+        'Google Sheets',
+        'Organization, data & analysis',
+        'DATA'
+    ],
 
-                document.body.classList.add(
-                    "no-scroll"
-                );
+    grammarly: [
+        'Grammarly',
+        'Grammar, clarity, tone & rewriting',
+        'WRITING'
+    ]
 
-            });
-
-        });
-
-
-        const closeLightbox = () => {
-
-            lightbox.classList.remove("open");
-
-            document.body.classList.remove(
-                "no-scroll"
-            );
-
-        };
-
-
-        lightboxClose.addEventListener(
-            "click",
-            closeLightbox
-        );
+};
 
 
-        lightbox.addEventListener(
-            "click",
-            (event) => {
+// =========================================
+// COMPARISON CARD INTERACTION
+// =========================================
 
-                if (event.target === lightbox) {
-                    closeLightbox();
-                }
+document
+    .querySelectorAll('.comparison-card')
+    .forEach(card => {
 
-            }
-        );
+        card.addEventListener('click', () => {
 
+            document
+                .querySelectorAll('.comparison-card')
+                .forEach(c => {
 
-        document.addEventListener(
-            "keydown",
-            (event) => {
-
-                if (
-                    event.key === "Escape" &&
-                    lightbox.classList.contains("open")
-                ) {
-
-                    closeLightbox();
-
-                }
-
-            }
-        );
-
-    }
-
-
-    /* =====================================================
-       VIDEO CONTROL
-       Only one video plays at a time
-    ===================================================== */
-
-    const videos =
-        document.querySelectorAll("video");
-
-    videos.forEach((video) => {
-
-        video.addEventListener(
-            "play",
-            () => {
-
-                videos.forEach((otherVideo) => {
-
-                    if (
-                        otherVideo !== video &&
-                        !otherVideo.paused
-                    ) {
-
-                        otherVideo.pause();
-
-                    }
+                    c.classList.remove('active');
 
                 });
 
-            }
-        );
+
+            card.classList.add('active');
 
 
-        /* Handle video errors */
+            const d =
+                comparisonData[
+                    card.dataset.tool
+                ];
 
-        video.addEventListener(
-            "error",
-            () => {
 
-                console.warn(
-                    "Video could not be loaded:",
-                    video.currentSrc
+            if (!d) return;
+
+
+            const title =
+                document.getElementById(
+                    'comparisonTitle'
                 );
 
-            }
-        );
-
-    });
-
-
-    /* =====================================================
-       SMOOTH ANCHOR SCROLL
-    ===================================================== */
-
-    document.querySelectorAll(
-        'a[href^="#"]'
-    ).forEach((link) => {
-
-        link.addEventListener(
-            "click",
-            (event) => {
-
-                const targetId =
-                    link.getAttribute("href");
-
-                if (
-                    !targetId ||
-                    targetId === "#"
-                ) {
-                    return;
-                }
-
-
-                const target =
-                    document.querySelector(targetId);
-
-                if (!target) {
-                    return;
-                }
-
-
-                event.preventDefault();
-
-                const navbarHeight = 75;
-
-                const targetPosition =
-                    target.getBoundingClientRect().top +
-                    window.scrollY -
-                    navbarHeight;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: "smooth"
-                });
-
-            }
-        );
-
-    });
-
-
-    /* =====================================================
-       IMAGE ERROR HANDLING
-    ===================================================== */
-
-    const images =
-        document.querySelectorAll("img");
-
-    images.forEach((image) => {
-
-        image.addEventListener(
-            "error",
-            () => {
-
-                image.style.opacity = "0.25";
-
-                console.warn(
-                    "Image could not be loaded:",
-                    image.src
+            const text =
+                document.getElementById(
+                    'comparisonText'
                 );
 
-            }
-        );
-
-    });
-
-
-    /* =====================================================
-       BUTTON / CARD MICRO INTERACTION
-    ===================================================== */
-
-    const interactiveCards =
-        document.querySelectorAll(
-            ".tool-card, .feature-card"
-        );
-
-    interactiveCards.forEach((card) => {
-
-        card.addEventListener(
-            "mouseenter",
-            () => {
-
-                card.style.setProperty(
-                    "--mouse-x",
-                    "50%"
+            const job =
+                document.getElementById(
+                    'comparisonJob'
                 );
 
+
+            if (title) {
+                title.textContent = d[0];
             }
-        );
+
+            if (text) {
+                text.textContent = d[1];
+            }
+
+            if (job) {
+                job.textContent = d[2];
+            }
+
+        });
 
     });
-
-
-    /* =====================================================
-       INITIAL PAGE LOAD
-    ===================================================== */
-
-    window.dispatchEvent(
-        new Event("scroll")
-    );
-
-});
