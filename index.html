@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Smart Use of AI — A practical guide to Canva Magic, Google Gemini, NotebookLM and Google Sheets by Sahil Thute."
+    >
+
+    <title>Smart Use of AI | Sahil Thute</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Website CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                <span class="logo-mark">S</span>
+                <span class="logo-text">Smart<span>AI</span></span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#tools" class="nav-link">Tools</a>
+                <a href="#canva" class="nav-link">Canva</a>
+                <a href="#gemini" class="nav-link">Gemini</a>
+                <a href="#notebooklm" class="nav-link">NotebookLM</a>
+                <a href="#sheets" class="nav-link">Sheets</a>
+                <a href="#explore" class="nav-link">Explore</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO
+        ========================== -->
+        <section class="hero" id="home">
+
+            <div class="hero-grid"></div>
+
+            <div class="hero-glow hero-glow-one"></div>
+            <div class="hero-glow hero-glow-two"></div>
+
+            <div class="container hero-container">
+
+                <div class="hero-content reveal">
+
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        SMART USE OF AI
+                    </div>
+
+                    <h1>
+                        Learn faster.
+                        <span>Create better.</span>
+                        Work smarter.
+                    </h1>
+
+                    <p class="hero-description">
+                        Discover practical AI tools that can help students
+                        learn, create, organize and work more efficiently.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#tools" class="btn btn-primary">
+                            Explore AI Tools
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+
+                        <a href="#explore" class="btn btn-secondary">
+                            See How It Works
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="hero-stats">
+
+                        <div class="hero-stat">
+                            <strong>04</strong>
+                            <span>AI Tools</span>
+                        </div>
+
+                        <div class="stat-line"></div>
+
+                        <div class="hero-stat">
+                            <strong>01</strong>
+                            <span>Student Toolkit</span>
+                        </div>
+
+                        <div class="stat-line"></div>
+
+                        <div class="hero-stat">
+                            <strong>∞</strong>
+                            <span>Possibilities</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AI ORBIT VISUAL -->
+                <div class="hero-visual reveal">
+
+                    <div class="orbit orbit-large"></div>
+                    <div class="orbit orbit-small"></div>
+
+                    <div class="hero-center">
+
+                        <div class="hero-ai-icon">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+
+                        <span>AI</span>
+
+                    </div>
+
+                    <div class="floating-tool floating-canva">
+                        <div class="mini-icon canva-mini">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <span>Canva</span>
+                    </div>
+
+                    <div class="floating-tool floating-gemini">
+                        <div class="mini-icon gemini-mini">
+                            <span class="gemini-symbol">✦</span>
+                        </div>
+                        <span>Gemini</span>
+                    </div>
+
+                    <div class="floating-tool floating-notebook">
+                        <div class="mini-icon notebook-mini">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <span>NotebookLM</span>
+                    </div>
+
+                    <div class="floating-tool floating-sheets">
+                        <div class="mini-icon sheets-mini">
+                            <i class="fa-solid fa-table-cells"></i>
+                        </div>
+                        <span>Sheets</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="scroll-indicator">
+                <span>SCROLL TO EXPLORE</span>
+                <i class="fa-solid fa-arrow-down"></i>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INTRO / TOOLS
+        ========================== -->
+        <section class="section tools-section" id="tools">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <div class="section-number">01 / TOOLKIT</div>
+
+                    <h2>
+                        The tools behind
+                        <span>smarter work.</span>
+                    </h2>
+
+                    <p>
+                        Four practical tools. Four different ways to use AI
+                        for studying, creativity, research and organization.
+                    </p>
+
+                </div>
+
+
+                <div class="tools-grid">
+
+                    <!-- CANVA -->
+                    <a href="#canva" class="tool-card tool-card-canva reveal">
+
+                        <div class="tool-card-top">
+
+                            <span class="tool-number">01</span>
+
+                            <div class="tool-icon canva-icon">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+
+                        </div>
+
+                        <h3>Canva Magic</h3>
+
+                        <p>
+                            Create presentations, graphics and visual content
+                            faster with AI-assisted design.
+                        </p>
+
+                        <span class="tool-link">
+                            Explore Canva
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <!-- GEMINI -->
+                    <a href="#gemini" class="tool-card tool-card-gemini reveal">
+
+                        <div class="tool-card-top">
+
+                            <span class="tool-number">02</span>
+
+                            <div class="tool-icon gemini-icon">
+                                <span class="gemini-star">✦</span>
+                            </div>
+
+                        </div>
+
+                        <h3>Google Gemini</h3>
+
+                        <p>
+                            Brainstorm ideas, understand concepts and use AI
+                            as a practical study assistant.
+                        </p>
+
+                        <span class="tool-link">
+                            Explore Gemini
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <!-- NOTEBOOKLM -->
+                    <a href="#notebooklm" class="tool-card tool-card-notebook reveal">
+
+                        <div class="tool-card-top">
+
+                            <span class="tool-number">03</span>
+
+                            <div class="tool-icon notebook-icon">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+
+                        </div>
+
+                        <h3>NotebookLM</h3>
+
+                        <p>
+                            Turn your own study material into an interactive
+                            learning assistant.
+                        </p>
+
+                        <span class="tool-link">
+                            Explore NotebookLM
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <!-- SHEETS -->
+                    <a href="#sheets" class="tool-card tool-card-sheets reveal">
+
+                        <div class="tool-card-top">
+
+                            <span class="tool-number">04</span>
+
+                            <div class="tool-icon sheets-icon">
+                                <i class="fa-solid fa-table-cells"></i>
+                            </div>
+
+                        </div>
+
+                        <h3>Google Sheets</h3>
+
+                        <p>
+                            Track, analyze and organize student data with
+                            formulas, charts and AI assistance.
+                        </p>
+
+                        <span class="tool-link">
+                            Explore Sheets
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CANVA
+        ========================== -->
+        <section class="section tool-section" id="canva">
+
+            <div class="container">
+
+                <div class="tool-header reveal">
+
+                    <div class="tool-title-area">
+
+                        <div class="section-number">02 / CANVA MAGIC</div>
+
+                        <div class="large-tool-icon canva-icon">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+
+                        <h2>
+                            Design faster.
+                            <span>Create visually.</span>
+                        </h2>
+
+                        <p>
+                            Canva helps turn ideas into presentations,
+                            graphics and visual content without starting
+                            everything from scratch.
+                        </p>
+
+                    </div>
+
+                    <div class="tool-label">
+                        <span>01</span>
+                        CREATIVE AI
+                    </div>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <div class="feature-card reveal">
+                        <span class="feature-icon">
+                            <i class="fa-solid fa-bolt"></i>
+                        </span>
+                        <h3>Design faster</h3>
+                        <p>
+                            Start with templates and AI-assisted design
+                            instead of building every element manually.
+                        </p>
+                    </div>
+
+                    <div class="feature-card reveal">
+                        <span class="feature-icon">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </span>
+                        <h3>AI-assisted creation</h3>
+                        <p>
+                            Use AI features to quickly transform an idea
+                            into usable visual content.
+                        </p>
+                    </div>
+
+                    <div class="feature-card reveal">
+                        <span class="feature-icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </span>
+                        <h3>Idea to output</h3>
+                        <p>
+                            Move from a rough idea to a presentation,
+                            poster or social graphic more efficiently.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="media-layout">
+
+                    <div class="video-card reveal">
+
+                        <div class="media-heading">
+                            <span>DEMO</span>
+                            <h3>Canva in action</h3>
+                        </div>
+
+                        <video
+                            controls
+                            playsinline
+                            preload="metadata"
+                            poster="assets/canva1.png"
+                        >
+                            <source
+                                src="assets/optimized/Canva_web.mp4"
+                                type="video/mp4"
+                            >
+                            Your browser does not support the video tag.
+                        </video>
+
+                    </div>
+
+
+                    <div class="screenshot-grid">
+
+                        <div class="screenshot-card reveal">
+                            <img
+                                src="assets/canva1.png"
+                                alt="Canva interface"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="screenshot-card reveal">
+                            <img
+                                src="assets/canva2.png"
+                                alt="Canva AI feature"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="screenshot-card reveal">
+                            <img
+                                src="assets/canva3.png"
+                                alt="Canva design"
+                                loading="lazy"
+                            >
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             GEMINI
+        ========================== -->
+        <section class="section tool-section dark-section" id="gemini">
+
+            <div class="container">
+
+                <div class="tool-header reveal">
+
+                    <div class="tool-title-area">
+
+                        <div class="section-number">03 / GOOGLE GEMINI</div>
+
+                        <!-- ACTUAL GEMINI-STYLE SYMBOL -->
+                        <div class="large-tool-icon gemini-icon gemini-large">
+                            <span class="gemini-star">✦</span>
+                        </div>
+
+                        <h2>
+                            Think with AI.
+                            <span>Learn smarter.</span>
+                        </h2>
+
+                        <p>
+                            Gemini can help with brainstorming, explanations,
+                            study questions and everyday productivity.
+                        </p>
+
+                    </div>
+
+                    <div class="tool-label">
+                        <span>02</span>
+                        AI ASSISTANT
+                    </div>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <div class="feature-card reveal">
+
+                        <span class="feature-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </span>
+
+                        <h3>Explain concepts</h3>
+
+                        <p>
+                            Ask for explanations in simpler language and
+                            explore difficult concepts step by step.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card reveal">
+
+                        <span class="feature-icon">
+                            <i class="fa-solid fa-brain"></i>
+                        </span>
+
+                        <h3>Brainstorm</h3>
+
+                        <p>
+                            Generate ideas for projects, presentations,
+                            assignments and creative work.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card reveal">
+
+                        <span class="feature-icon">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </span>
+
+                        <h3>Study assistant</h3>
+
+                        <p>
+                            Use prompts to create questions, summaries,
+                            examples and learning plans.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="media-layout">
+
+                    <div class="video-card reveal">
+
+                        <div class="media-heading">
+                            <span>DEMO</span>
+                            <h3>Gemini in action</h3>
+                        </div>
+
+                        <video
+                            controls
+                            playsinline
+                            preload="metadata"
+                            poster="assets/gemini1.png"
+                        >
+                            <source
+                                src="assets/optimized/Gemini_web.mp4"
+                                type="video/mp4"
+                            >
+                            Your browser does not support the video tag.
+                        </video>
+
+                    </div>
+
+
+                    <div class="screenshot-grid">
+
+                        <div class="screenshot-card reveal">
+                            <img
+                                src="assets/gemini1.png"
+                                alt="Google Gemini interface"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="screenshot-card reveal">
+                            <img
+                                src="assets/gemini2.png"
+                                alt="Google Gemini conversation"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="screenshot-card reveal">
+                            <img
+                                src="assets/gemini3.png"
+                                alt="Google Gemini AI response"
+                                loading="lazy"
+                            >
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             NOTEBOOKLM
+        ========================== -->
+        <section class="section tool-section" id="notebooklm">
+
+            <div class="container">
+
+                <div class="tool-header reveal">
+
+                    <div class="tool-title-area">
+
+                        <div class="section-number">04 / NOTEBOOKLM</div>
+
+                        <div class="large-tool-icon notebook-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+
+                        <h2>
+                            Study from
+                            <span>your own sources.</span>
+                        </h2>
+
+                        <p>
+                            NotebookLM helps you interact with the material
+                            you provide and turn it into a more useful study
+                            experience.
+                        </p>
+
+                    </div>
+
+                    <div class="tool-label">
+                        <span>03</span>
+                        RESEARCH AI
+                    </div>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <div class="feature-card reveal">
+
+                        <span class="feature-icon">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </span>
+
+                        <h3>Use your sources</h3>
+
+                        <p>
+                            Bring your notes, documents and other study
+                            material into one workspace.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card reveal">
+
+                        <span class="feature-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+
+                        <h3>Find information</h3>
+
+                        <p>
+                            Ask questions about your material and quickly
+                            locate useful information.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card reveal">
+
+                        <span class="feature-icon">
+                            <i class="fa-solid fa-list-check"></i>
+                        </span>
+
+                        <h3>Study smarter</h3>
+
+                        <p>
+                            Create summaries, questions and useful study
+                            material from your sources.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="media-layout">
+
+                    <div class="video-card reveal">
+
+                        <div class="media-heading">
+                            <span>DEMO</span>
+                            <h3>NotebookLM in action</h3>
+                        </div>
+
+                        <video
+                            controls
+                            playsinline
+                            preload="metadata"
+                            poster="assets/notebooklm1.png"
+                        >
+                            <source
+                                src="assets/optimized/NotebookLM_web.mp4"
+                                type="video/mp4"
+                            >
+                            Your browser does not support the video tag.
+                        </video>
+
+                    </div>
+
+
+                    <div class="screenshot-grid two-images">
+
+                        <div class="screenshot-card reveal">
+                            <img
+                                src="assets/notebooklm1.png"
+                                alt="NotebookLM interface"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="screenshot-card reveal">
+                            <img
+                                src="assets/NotebookLM2.png"
+                                alt="NotebookLM study interface"
+                                loading="lazy"
+                            >
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             GOOGLE SHEETS
+        ========================== -->
+        <section class="section tool-section dark-section" id="sheets">
+
+            <div class="container">
+
+                <div class="tool-header reveal">
+
+                    <div class="tool-title-area">
+
+                        <div class="section-number">05 / GOOGLE SHEETS</div>
+
+                        <div class="large-tool-icon sheets-icon">
+                            <i class="fa-solid fa-table-cells"></i>
+                        </div>
+
+                        <h2>
+                            Turn data into
+                            <span>something useful.</span>
+                        </h2>
+
+                        <p>
+                            Track assignments, analyze scores and organize
+                            projects using formulas, charts and AI assistance.
+                        </p>
+
+                    </div>
+
+                    <div class="tool-label">
+                        <span>04</span>
+                        DATA + ORGANIZATION
+                    </div>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <div class="feature-card reveal">
+
+                        <span class="feature-icon">
+                            <i class="fa-solid fa-list"></i>
+                        </span>
+
+                        <h3>Track</h3>
+
+                        <p>
+                            Assignments • deadlines • scores
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card reveal">
+
+                        <span class="feature-icon">
+                            <i class="fa-solid fa-chart-simple"></i>
+                        </span>
+
+                        <h3>Analyze</h3>
+
+                        <p>
+                            Formulas • charts • patterns
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card reveal">
+
+                        <span class="feature-icon">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </span>
+
+                        <h3>Plan</h3>
+
+                        <p>
+                            Budget • projects • progress
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="media-layout">
+
+                    <div class="video-card reveal">
+
+                        <div class="media-heading">
+                            <span>DEMO</span>
+                            <h3>Google Sheets in action</h3>
+                        </div>
+
+                        <video
+                            controls
+                            playsinline
+                            preload="metadata"
+                            poster="assets/googlesheet1.png"
+                        >
+                            <source
+                                src="assets/optimized/Google_sheet_web.mp4"
+                                type="video/mp4"
+                            >
+                            Your browser does not support the video tag.
+                        </video>
+
+                    </div>
+
+
+                    <div class="screenshot-grid two-images">
+
+                        <div class="screenshot-card reveal">
+                            <img
+                                src="assets/googlesheet1.png"
+                                alt="Google Sheets student tracker"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="screenshot-card reveal">
+                            <img
+                                src="assets/googlesheet2.png"
+                                alt="Google Sheets analysis"
+                                loading="lazy"
+                            >
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRACTICAL DEMO -->
+                <div class="demo-section reveal">
+
+                    <div class="demo-heading">
+
+                        <div>
+                            <div class="section-number">PRACTICAL DEMO</div>
+
+                            <h3>
+                                Build a simple
+                                <span>Student Tracker</span>
+                            </h3>
+                        </div>
+
+                        <div class="demo-icon">
+                            <i class="fa-solid fa-table-cells"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="demo-steps">
+
+                        <div class="demo-step">
+
+                            <span class="step-number">01</span>
+
+                            <div>
+                                <h4>Create the spreadsheet</h4>
+
+                                <p>
+                                    Open Google Sheets → Blank Spreadsheet
+                                    → name it <strong>Student Tracker</strong>.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="demo-step">
+
+                            <span class="step-number">02</span>
+
+                            <div>
+                                <h4>Add your columns</h4>
+
+                                <p>
+                                    Subject, Assignment, Due Date, Status,
+                                    Score (%)
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="demo-step">
+
+                            <span class="step-number">03</span>
+
+                            <div>
+                                <h4>Add sample data</h4>
+
+                                <p>
+                                    Add sample information for five subjects
+                                    and update the status and scores.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="demo-step">
+
+                            <span class="step-number">04</span>
+
+                            <div>
+                                <h4>Use formulas</h4>
+
+                                <div class="code-pills">
+                                    <code>=AVERAGE(E2:E6)</code>
+                                    <code>=COUNTIF(D2:D6,"Done")</code>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="demo-step">
+
+                            <span class="step-number">05</span>
+
+                            <div>
+                                <h4>Visualize the data</h4>
+
+                                <p>
+                                    Select the data → Insert → Chart →
+                                    choose a Bar or Pie chart.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="demo-step">
+
+                            <span class="step-number">06</span>
+
+                            <div>
+                                <h4>Ask Gemini</h4>
+
+                                <p>
+                                    Use the Gemini sidebar and ask:
+                                    <strong>
+                                        “Which subject needs most attention?”
+                                    </strong>
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             COMPARISON
+        ========================== -->
+        <section class="section comparison-section" id="explore">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <div class="section-number">06 / QUICK COMPARISON</div>
+
+                    <h2>
+                        Choose the right
+                        <span>tool for the task.</span>
+                    </h2>
+
+                    <p>
+                        Each tool has a different role in a student's
+                        workflow.
+                    </p>
+
+                </div>
+
+
+                <div class="comparison-table-wrap reveal">
+
+                    <table class="comparison-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Tool</th>
+                                <th>Best for</th>
+                                <th>Useful when you want to...</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    <div class="table-tool">
+                                        <span class="table-icon canva-icon">
+                                            <i class="fa-solid fa-palette"></i>
+                                        </span>
+                                        Canva Magic
+                                    </div>
+                                </td>
+
+                                <td>Visual content</td>
+
+                                <td>
+                                    Create presentations and graphics
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="table-tool">
+                                        <span class="table-icon gemini-icon">
+                                            <span class="gemini-star">✦</span>
+                                        </span>
+                                        Google Gemini
+                                    </div>
+                                </td>
+
+                                <td>AI assistance</td>
+
+                                <td>
+                                    Brainstorm, explain and learn
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="table-tool">
+                                        <span class="table-icon notebook-icon">
+                                            <i class="fa-solid fa-book-open"></i>
+                                        </span>
+                                        NotebookLM
+                                    </div>
+                                </td>
+
+                                <td>Study + research</td>
+
+                                <td>
+                                    Work with your own sources
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="table-tool">
+                                        <span class="table-icon sheets-icon">
+                                            <i class="fa-solid fa-table-cells"></i>
+                                        </span>
+                                        Google Sheets
+                                    </div>
+                                </td>
+
+                                <td>Data + organization</td>
+
+                                <td>
+                                    Track and analyze information
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TAKEAWAY
+        ========================== -->
+        <section class="section takeaway-section">
+
+            <div class="container">
+
+                <div class="takeaway-card reveal">
+
+                    <div class="takeaway-glow"></div>
+
+                    <div class="takeaway-content">
+
+                        <div class="section-number">
+                            FINAL TAKEAWAY
+                        </div>
+
+                        <h2>
+                            AI is not about
+                            <span>doing less.</span>
+                        </h2>
+
+                        <p>
+                            It's about using the right tools to spend less
+                            time on repetitive work and more time on learning,
+                            creating and solving problems.
+                        </p>
+
+                        <a href="#home" class="btn btn-primary">
+                            Back to Top
+                            <i class="fa-solid fa-arrow-up"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="takeaway-symbol">
+                        <span>✦</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+                    <span class="logo-mark">S</span>
+                    <span class="logo-text">
+                        Smart<span>AI</span>
+                    </span>
+                </a>
+
+                <p>
+                    A practical AI toolkit for smarter learning,
+                    creativity and productivity.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#canva">Canva</a>
+                <a href="#gemini">Gemini</a>
+                <a href="#notebooklm">NotebookLM</a>
+                <a href="#sheets">Sheets</a>
+
+            </div>
+
+
+            <div class="footer-author">
+
+                <span>CREATED BY</span>
+
+                <strong>Sahil Thute</strong>
+
+                <small>
+                    BCA Student • Technology Creator
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <span>
+                    © 2026 Sahil Thute. Smart Use of AI.
+                </span>
+
+                <span>
+                    Learn • Create • Work Smarter
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         IMAGE LIGHTBOX
+    ========================== -->
+    <div class="lightbox" id="lightbox">
+
+        <button
+            class="lightbox-close"
+            id="lightboxClose"
+            aria-label="Close image"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <img
+            id="lightboxImage"
+            src=""
+            alt="Expanded screenshot"
+        >
+
+    </div>
+
+
+    <!-- BACK TO TOP -->
+    <button
+        class="back-to-top"
+        id="backToTop"
+        aria-label="Back to top"
+    >
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+    <!-- Website JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
